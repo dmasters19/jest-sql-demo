@@ -4,13 +4,15 @@ const { createUser } = require('../src/index');
 
 describe('transaction', () => {
 
+  beforeAll(async() => {
+    await User.sync();
+  })
+
   afterAll(async () => {
     await sequelize.close();
   });
 
   test('creates a user', async () => {
-
-    await User.sync();
     const countBefore = await User.count();
     expect(countBefore).toEqual(0);
     await createUser();

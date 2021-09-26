@@ -1,6 +1,5 @@
 const { Sequelize } = require('sequelize');
 
-
 const createDatabase = async function(){
   const sequelize = new Sequelize('', 'root', 'local', {
     host: 'localhost',
