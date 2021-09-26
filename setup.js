@@ -1,5 +1,7 @@
 const { createDatabase } = require('./src/utils/database');
 
 module.exports = async() => {
-  await createDatabase();
+  if(process.env.SQL_DIALECT === 'mysql'){
+    await createDatabase();
+  }
 }

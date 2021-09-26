@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "jest"
+    "test:mysql": "SQL_DIALECT=mysql jest",
+    "test:sqlite": "SQL_DIALECT=sqlite jest"
   },
   "repository": {
     "type": "git",

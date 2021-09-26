@@ -12,7 +12,7 @@ const createDatabase = async function(){
 
 const sequelize = new Sequelize('demo', 'root', 'local', {
     host: 'localhost',
-    dialect: 'mysql'
+    dialect: process.env.SQL_DIALECT
 });
 
 module.exports = {
